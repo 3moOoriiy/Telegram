@@ -1,8 +1,8 @@
-# تحديث مشروع Streamlit لدعم Telegram + Reddit باستخدام Pushshift API
+# نسخة نظيفة من مشروع تيليجرام + ريديت بدون أي أوامر إنشاء مجلد (تعمل مباشرة على Streamlit Cloud)
 import os
 import zipfile
 
-project_path = "/mnt/data/telegram_reddit_scraper_streamlit"
+project_path = "/mnt/data/telegram_reddit_streamlit_clean"
 os.makedirs(project_path, exist_ok=True)
 
 # كود التطبيق
@@ -121,7 +121,7 @@ with open(f"{project_path}/requirements.txt", "w", encoding="utf-8") as f:
     f.write(reqs)
 
 # ضغط المشروع
-zip_path = "/mnt/data/telegram_reddit_scraper_streamlit.zip"
+zip_path = "/mnt/data/telegram_reddit_streamlit_clean.zip"
 with zipfile.ZipFile(zip_path, "w") as zipf:
     zipf.write(f"{project_path}/app.py", arcname="app.py")
     zipf.write(f"{project_path}/requirements.txt", arcname="requirements.txt")
